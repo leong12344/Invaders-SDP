@@ -42,7 +42,7 @@ public class EnemyShip extends Entity {
 	 */
 	public EnemyShip(final int positionX, final int positionY,
 			final SpriteType spriteType) {
-		super(positionX, positionY, 12 * 2, 8 * 2, Color.WHITE);
+		super(positionX, positionY, 12 * 2, 8 * 2, getDefaultColor(spriteType));
 
 		this.spriteType = spriteType;
 		this.animationCooldown = Core.getCooldown(500);
@@ -66,6 +66,23 @@ public class EnemyShip extends Entity {
 			break;
 		}
 	}
+
+	private static Color getDefaultColor(SpriteType spriteType) {
+		switch (spriteType) {
+			case EnemyShipA1:
+			case EnemyShipA2:
+				return Color.red;
+			case EnemyShipB1:
+			case EnemyShipB2:
+				return Color.blue;
+			case EnemyShipC1:
+			case EnemyShipC2:
+				return Color.yellow;
+			default:
+				return Color.white;
+		}
+	}
+
 
 	/**
 	 * Constructor, establishes the ship's properties for a special ship, with
