@@ -67,7 +67,10 @@ public class EnemyShip extends Entity {
 		}
 	}
 
+<<<<<<< HEAD
 	//changing the colors by default // new types of enemies will be white
+=======
+>>>>>>> enemy-ship
 	private static Color getDefaultColor(SpriteType spriteType) {
 		switch (spriteType) {
 			case EnemyShipA1:
@@ -84,6 +87,10 @@ public class EnemyShip extends Entity {
 		}
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> enemy-ship
 	/**
 	 * Constructor, establishes the ship's properties for a special ship, with
 	 * known starting properties.
